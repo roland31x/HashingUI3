@@ -12,6 +12,11 @@
           Background="#100f22">
         <StackPanel HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
+            <TextBlock Text="HashUI3"
+                       FontSize="32"
+                       Margin="0,10,0,50"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"/>
             <Button x:Name ="FileSelectorButton" 
                     Content="Select Files" 
                     Click="FileSelectorButton_Click" 
