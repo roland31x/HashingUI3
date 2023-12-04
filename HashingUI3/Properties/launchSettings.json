@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HashingUI3 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "HashingUI3 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

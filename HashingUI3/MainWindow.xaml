@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="HashingUI3.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HashingUI3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="MainGrid"
+          Background="#100f22">
+        <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+            <Button x:Name ="FileSelectorButton" 
+                    Content="Select Files" 
+                    Click="FileSelectorButton_Click" 
+                    Margin="0,10,0,20"
+                    HorizontalAlignment="Center"
+                    FontSize="24"/>
+            
+            <StackPanel Orientation="Horizontal">
+
+                <ScrollViewer MaxHeight="400"
+                              MaxWidth="400">
+                    <RichTextBlock HorizontalTextAlignment="Right">
+                        <Paragraph x:Name="FileNameBlock">
+
+                        </Paragraph>
+                    </RichTextBlock>
+                </ScrollViewer>
+
+                <ScrollViewer MaxHeight="400">
+                    <RichTextBlock Margin="20,0,0,0">
+                        <Paragraph x:Name="HashBlock">
+
+                        </Paragraph>
+                    </RichTextBlock>
+                </ScrollViewer>
+
+            </StackPanel>
+                
+            <TextBlock Text="Hash Algorithm:"
+                       FontSize="20"
+                       Margin="0,30,0,20" 
+                       HorizontalAlignment="Center"/>
+                
+            <ComboBox x:Name="HashSelectionBox" 
+                      SelectedIndex="0" 
+                      HorizontalAlignment="Center"
+                      FontSize="24"
+                      SelectionChanged="HashSelectionBox_SelectionChanged">
+                <ComboBoxItem Content="MD5"
+                              FontSize="16" />
+                <ComboBoxItem Content="SHA1"
+                              FontSize="16" />
+                <ComboBoxItem Content="SHA256"
+                              FontSize="16" />
+                <ComboBoxItem Content="SHA384"
+                              FontSize="16" />
+                <ComboBoxItem Content="SHA512"
+                              FontSize="16" />
+            </ComboBox>
+
+            <Button x:Name="Hash_Button"
+                    Content="Hash"
+                    HorizontalAlignment="Center"
+                    Click="Hash_Button_Click"
+                    Margin="0,20,0,0"
+                    FontSize="24"
+                    Background="LimeGreen" />
+        </StackPanel>
+       
+    </Grid>
+</Window>
